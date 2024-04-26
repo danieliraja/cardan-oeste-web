@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets"
+import astroConfig from "../../astro.config.mjs"
+import logo from "../../public/favicon.svg"
+---
+
+<nav class="bg-gray-800 h-28">
+  <div class="container mx-auto flex justify-between">
+    <a href="/"><Image src={logo} alt="Logo" class="h-16" /></a>
+    <ul class="flex h-8 justify-between gap-8 ">
+      <li><a href="/">Pagina Inicial</a></li>
+      <li><a href="/sobre">Sobre nós</a></li>
+      <li><a href="/produtos">Produtos</a></li>
+      <li><a href="/contato">Contato</a></li>
+    </ul>
+  </div>  
+</nav>
