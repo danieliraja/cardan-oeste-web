@@ -3,34 +3,99 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Cardan Oeste - Sobre nós">
-  <main class="bg-blue-950">
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-      <div
-        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true"
-      >
-        <div
-          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#000000 ] to-[#000000] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-        >
+  <main class="bg-white-950 pt-32">
+    <div
+      class="bg-[url('images/chaves.jpg')] bg-cover bg-blend-hard-light bg-center py-8 px-4"
+    >
+      <div class="container mx-auto sm:px-6 lg:px-0">
+        <h1 class="text-4xl font-semibold text-slate-100 pb-4">Sobre nós</h1>
+        <hr class="border-blue-800 border-2 w-48" />
+        <p class="text-white font-thin text-lg pt-2">
+          Saiba um pouco sobre nossa história
+        </p>
+      </div>
+    </div>
+    <div class="container mx-auto py-8">
+      <section class="grid grid-cols-1 gap-4">
+        <div class="rounded-md px-4">
+          <img
+            class="rounded-md w-full"
+            src="images/fachada-da-empresa.png"
+            alt=""
+          />
         </div>
-      </div>
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <section class="bg-gray-200 py-16">
-          <div class="container mx-auto">
-            <h1 class="text-3xl font-bold text-center mb-8">Sobre Nós</h1>
-            <p class="text-lg max-w-2xl mx-auto">
-              A Cardan Oeste é uma empresa fundada em 2016, com sede no Rio de
-              Janeiro, especializada no ramo de reparo, venda e distribuição de
-              peças de cardans para caminhões. Nosso compromisso é fornecer
-              soluções confiáveis e eficientes para as necessidades dos nossos
-              clientes. Contamos com uma equipe altamente qualificada e
-              experiente, além de trabalhar com os principais fabricantes do
-              mercado, garantindo a qualidade e durabilidade dos nossos
-              produtos.
-            </p>
-          </div>
-        </section>
-      </div>
+        <div class="px-4">
+          <p class="text-lg mx-auto">
+            Há mais de 19 anos, a Cardan Oeste se dedica a oferecer soluções
+            completas em reparos de cardan para veículos leves e pesados no Rio
+            de Janeiro. Nascida da paixão por motores e da vontade de oferecer
+            serviços de qualidade e confiabilidade, a Cardan Oeste se tornou
+            referência na região, conquistando a fidelidade de clientes que
+            buscam excelência e segurança.
+          </p>
+          <h3 class="text-2xl font-bold text-gray-600 mt-4">Nossa Missão</h3>
+          <hr class="my-4 border-gray-200 border-1 w-28" />
+          <ul class="list-disc px-4">
+            <li class="text-lg">
+              Oferecer soluções completas em reparos de cardan com qualidade,
+              agilidade e segurança.
+            </li>
+            <li class="text-lg">
+              Garantir a satisfação dos clientes através de um atendimento
+              personalizado e atencioso.
+            </li>
+            <li class="text-lg">
+              Contribuir para a segurança nas estradas através da manutenção
+              preventiva e do reparo especializado de cardans.
+            </li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-gray-600 mt-4">Nossos Valores</h3>
+          <hr class="my-4 border-gray-200 border-1 w-28" />
+          <ul class="list-disc px-4">
+            <li class="text-lg">
+              Qualidade: Buscamos a excelência em tudo que fazemos, utilizando
+              as melhores práticas, tecnologias e peças de reposição.
+            </li>
+            <li class="text-lg">
+              Segurança: Priorizamos a segurança dos nossos clientes e
+              colaboradores em todas as nossas atividades.
+            </li>
+            <li class="text-lg">
+              Confiabilidade: Construímos relações de confiança duradouras com
+              nossos clientes através da transparência, honestidade e
+              profissionalismo.
+            </li>
+            <li class="text-lg">
+              Eficiência: Trabalhamos de forma organizada e produtiva para
+              otimizar o tempo e os recursos, oferecendo soluções rápidas e
+              eficientes aos nossos clientes.
+            </li>
+            <li class="text-lg">
+              Atendimento ao cliente: Oferecemos um atendimento excepcional,
+              personalizado e acolhedor, buscando superar as expectativas dos
+              nossos clientes.
+            </li>
+            <li class="text-lg">
+              Inovação: Buscamos constantemente novas soluções e tecnologias
+              para aprimorar nossos serviços e atender às necessidades dos
+              nossos clientes.
+            </li>
+            <li class="text-lg">
+              Responsabilidade social: Contribuímos para o desenvolvimento
+              social da comunidade através de ações sustentáveis e responsáveis.
+            </li>
+          </ul>
+          <p class="text-lg mt-4">
+            São esses valores que nos impulsionam a oferecer a melhor
+            experiência possível aos nossos clientes e a nos destacarmos como
+            referência em reparos de cardan no Rio de Janeiro.
+          </p>
+          <h4 class="text-2xl font-bold text-gray-600">
+            Venha nos conhecer e experimente a diferença da Cardan Oeste!
+          </h4>
+        </div>
+      </section>
     </div>
   </main>
 </Layout>

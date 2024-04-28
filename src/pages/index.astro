@@ -4,27 +4,138 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Cardan Oeste - Reparadora de cardans">
-  <main class="bg-blue-950">
+  <div class="bg-[url('images/banner.jpg')] bg-cover bg-center">
     <div class="relative isolate px-6 pt-14 lg:px-8">
-      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#000000	] to-[#000000] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" >
-        </div>
+      <div
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
       </div>
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        
-        <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Recuperação de cardans e peças para seu caminhão</h1>
-          <p class="mt-6 text-lg leading-8 text-gray-200">Seja para reparos, reposição de peças ou consultas técnicas, a Cardan Oeste é o seu parceiro confiável no mundo dos cardans de caminhões.</p>
+        <div class="text-left">
+          <h1
+            class="text-4xl font-bold tracking-tight text-blue-900 sm:text-6xl"
+          >
+            Diagnóstico preciso e reparo rápido para você seguir viagem
+          </h1>
+
+          <p class="mt-6 text-lg leading-8 text-slate-50 font-semibold">
+            Atendimento personalizado e profissional
+          </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-md bg-green-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="bi bi-whatsapp pr-2"></i>Entrar em contato</a>
+            <a
+              href="#"
+              class="rounded-md bg-green-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              ><i class="bi bi-whatsapp pr-2"></i>Entrar em contato</a
+            >
           </div>
         </div>
       </div>
-      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      <div
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
       </div>
     </div>
   </div>
-  
-  </main>
+  <section class="bg-gray-50 py-8">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-slate-600">Vantagens da empresa</h2>
+      <hr class="my-4 border-gray-200 border-1" />
+      <div class="grid grid-cols-4 gap-8">
+        <div
+          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6"
+        >
+          <div
+            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
+          >
+            <i class="bi bi-patch-check-fill text-3xl text-orange-600"></i>
+          </div>
+
+          <div class="py-4 mt-4">
+            <div class="font-bold text-xl text-gray-800 mb-4">
+              Expertise Comprovada
+            </div>
+            <ul class="list-disc list-inside text-base">
+              <ol>Mais de 20 anos em reparos de cardan.</ol>
+              <ol>Mais de 5000 reparos realizados com sucesso.</ol>
+              <ol>Técnicos altamente qualificados e experientes.</ol>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6"
+        >
+          <div
+            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
+          >
+            <i class="bi bi-clock-fill text-3xl text-orange-600"></i>
+          </div>
+
+          <div class="py-4 mt-4">
+            <div class="font-bold text-xl text-gray-800 mb-4">
+              Rapidez e Precisão
+            </div>
+            <ul class="list-disc list-inside text-base">
+              <ol>Diagnóstico completo e preciso do cardan.</ol>
+              <ol>Reparo rápido e eficiente com ferramentas modernas.</ol>
+              <ol>
+                Grande estoque de peças originais para agilizar o processo.
+              </ol>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6"
+        >
+          <div
+            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
+          >
+            <i class="bi bi-star-fill text-3xl text-orange-600"></i>
+          </div>
+
+          <div class="py-4 mt-4">
+            <div class="font-bold text-xl text-gray-800 mb-4">
+              Qualidade e Segurança
+            </div>
+            <ul class="list-disc list-inside text-base">
+              <ol>Garantia de qualidade para serviços e peças de reposição.</ol>
+              <ol>
+                Peças originais e de alta qualidade para o bom funcionamento do
+                veículo.
+              </ol>
+              <ol>
+                Serviços seguem rigorosos padrões de qualidade e segurança.
+              </ol>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6"
+        >
+          <div
+            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
+          >
+            <i class="bi bi-cash-stack text-3xl text-orange-600"></i>
+          </div>
+
+          <div class="py-4 mt-4">
+            <div class="font-bold text-xl text-gray-800 mb-4">
+              Preço Justo e Transparência
+            </div>
+            <ul class="list-disc list-inside text-base">
+              <ol>Preços justos e competitivos para todos os serviços.</ol>
+              <ol>Orçamento detalhado antes de iniciar qualquer serviço.</ol>
+              <ol>Transparência e bom relacionamento com os clientes.</ol>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
