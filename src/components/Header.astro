@@ -3,7 +3,7 @@ import astroConfig from "../../astro.config.mjs";
 ---
 
 <div class="bg-white-950">
-  <header class="absolute inset-x-0 top-0 z-50 mx-auto">
+  <header class="inset-x-0 mx-auto">
     <nav
       class="container mx-auto flex items-center justify-between p-6 lg:px-8"
       aria-label="Global"
@@ -19,20 +19,21 @@ import astroConfig from "../../astro.config.mjs";
           />
         </a>
       </div>
+
       <div class="flex lg:hidden">
         <button
           type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 houver:text-gray-900"
         >
           <span class="sr-only">Abrir menu</span>
-          <i class="bi bi-list text-4xl text-blue-900"></i>
+          <i class="bi bi-list text-4xl text-blue-950"></i>
         </button>
       </div>
 
       <div class="hidden lg:flex lg:gap-x-12">
         <a
           href={astroConfig.site}
-          class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
+          class="text-md font-semibold text-uppercase leading-6 text-blue-800 hover:text-blue-950"
           >Pagina inicial</a
         >
         <a
