@@ -6,8 +6,8 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://danieliraja.github.io",
+  site: "https://cardanoeste.com.br",
   // site: "http://localhost:4321",
-  base: "/cardan-oeste-web/",
+  base: "/",
   integrations: [sitemap(), tailwind(), robotsTxt()],
 });
