@@ -1,99 +1,126 @@
 ---
-import { Image } from "astro:assets";
-import logoLight from "../../public/images/logo-white.png";
 import astroConfig from "../../astro.config.mjs";
 const year = new Date().getFullYear();
 ---
 
-<footer class="font-[sans-serif] bg-black p-10">
+<footer class="font-[sans-serif] bg-gray-950 p-10">
   <div class="container mx-auto">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8">
-    <div class="xl:col-span-2">
-      <a href='javascript:void(0)'>
-        <img src="public/images/logo-white.png" alt="logo" class='h-32 w-auto' />
-      </a>
-      <ul class="mt-4 flex space-x-3">
-        <li>
-          <a href='javascript:void(0)' class="hover:text-white">            
-            <i class="bi bi-facebook text-gray-300 hover:text-white text-2xl"></i>
-          </a>
-        </li>
-        <li>
-          <a href='javascript:void(0)'>
-            <i class="bi bi-twitter text-gray-300 hover:text-white text-2xl"></i>
-          </a>
-        </li>
-        <li>
-          <a href='javascript:void(0)'>
-            <i class="bi bi-instagram text-gray-300 hover:text-white text-2xl"></i>
-          </a>
-        </li>
-        <li>
-          <a href='javascript:void(0)'>
-            <i class="bi bi-linkedin text-gray-300 hover:text-white text-2xl"></i>
-          </a>
-        </li>
-      </ul>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div class="w-full">
+        <a href={astroConfig.site}>
+          <img
+            src="public/images/logo-white.png"
+            alt="logo"
+            class="h-32 w-auto"
+          />
+        </a>
+        <ul class="mt-4 flex justify-start gap-4">
+          <li>
+            <a href="#" class="hover:text-white">
+              <i class="bi bi-facebook text-gray-300 hover:text-white text-2xl"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-instagram text-gray-300 hover:text-white text-2xl"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-linkedin text-gray-300 hover:text-white text-2xl"
+              ></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w-full">
+        <h4
+          class="text-white font-semibold text-lg relative max-sm:cursor-pointer"
+        >
+          Produtos
+        </h4>
+        <ul class="mt-4 space-y-5">
+          <li>
+            <a
+              href={astroConfig.base + "/produtos"}
+              class="hover:text-white text-gray-300 text-sm"
+              >Coluna de direção</a
+            >
+          </li>
+          <li>
+            <a
+              href={astroConfig.base + "/produtos"}
+              class="hover:text-white text-gray-300 text-sm">Barra de direção</a
+            >
+          </li>
+          <li>
+            <a
+              href={astroConfig.base + "/produtos"}
+              class="hover:text-white text-gray-300 text-sm">Eixo dianteiro</a
+            >
+          </li>
+          <li>
+            <a
+              href={astroConfig.base + "/produtos"}
+              class="hover:text-white text-gray-300 text-sm">Eixo cardan</a
+            >
+          </li>
+          <li>
+            <a
+              href={astroConfig.base + "/produtos"}
+              class="hover:text-white text-gray-300 text-sm">Tirant V</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="w-full">
+        <h4
+          class="text-white font-semibold text-lg relative max-sm:cursor-pointer"
+        >
+          Whatsapp
+        </h4>
+        <ul class="space-y-5 mt-4 max-sm:hidden">
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=5521974210745"
+              class="hover:text-white text-gray-300 text-sm"
+              >Vaval: (21) 97022-8344</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=5521974210745"
+              class="hover:text-white text-gray-300 text-sm"
+              >Jhonny: (21) 96421-0745</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h4 class="text-white font-semibold text-lg relative max-sm:cursor-pointer">Produtos 
-      </h4>
-      <ul class="mt-4 space-y-5">
+    <hr class="mt-8 border-gray-300" />
+    <div class="md:flex md:item-center mt-8">
+      <ul class="md:flex md:space-x-6 max-md:space-y-2">
         <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Web Development</a>
+          <a
+            href={astroConfig.site + "/termos-de-uso"}
+            class="hover:text-white text-gray-300 text-sm">Termos de serviços</a
+          >
         </li>
         <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Pricing</a>
-        </li>
-        <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Support</a>
-        </li>
-        <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Client Portal</a>
-        </li>
-        <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Resources</a>
+          <a
+            href={astroConfig.site + "/politica-de-privacidade"}
+            class="hover:text-white text-gray-300 text-sm"
+            >Politíca de privacidade</a
+          >
         </li>
       </ul>
+      <p class="text-gray-300 text-sm ml-auto max-md:mt-5">
+        Cardan Oeste © {year} | Todos os direitos reservados
+      </p>
     </div>
-    <div>
-      <h4 class="text-white font-semibold text-lg relative max-sm:cursor-pointer">Platforms <svg
-        xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-        class="sm:hidden absolute right-0 top-1 fill-[#d6d6d6]" viewBox="0 0 24 24">
-        <path
-          d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
-          data-name="16" data-original="#000000"></path>
-      </svg>
-      </h4>
-      <ul class="space-y-5 mt-4 max-sm:hidden">
-        <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Hubspot</a>
-        </li>
-        <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Integration Services</a>
-        </li>
-        <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>Marketing Glossar</a>
-        </li>
-        <li>
-          <a href='javascript:void(0)' class='hover:text-white text-gray-300 text-sm'>UIPath</a>
-        </li>
-      </ul>
-    </div> 
-    
-  </div>
-  <hr class="mt-8 border-gray-300" />
-  <div class="md:flex md:item-center mt-8">
-    <ul class="md:flex md:space-x-6 max-md:space-y-2">
-      <li>
-        <a href={astroConfig.site+'/termos-de-uso'} class='hover:text-white text-gray-300 text-sm'>Termos de serviços</a>
-      </li>
-      <li>
-        <a href={astroConfig.site+'/politica-de-privacidade'} class='hover:text-white text-gray-300 text-sm'>Politíca de privacidade</a>
-      </li>
-      
-    </ul>
-    <p class='text-gray-300 text-sm ml-auto max-md:mt-5'>Cardan Oeste © {year} | Todos os direitos reservados</p>
-  </div>
   </div>
 </footer>
