@@ -2,103 +2,93 @@
 import astroConfig from "../../astro.config.mjs";
 ---
 
-<div class="bg-white-950">
-  <header class="inset-x-0 mx-auto z-30">
-    <nav
-      class="container mx-auto flex items-center justify-between p-6 lg:px-8"
-      aria-label="Global"
+<header class="container mx-auto z-30">
+  <nav
+    class="container flex items-center justify-between py-6 lg:px-0"
+    aria-label="Global"
+  >
+    <a href={astroConfig.site} class="-m-1.5 p-1.5">
+      <span class="sr-only">Cardan Oeste</span>
+      <img
+        class="absolute h-28 w-auto top-2 z-40"
+        src={astroConfig.site + "/images/logo-ilustrativo-removebg-preview.png"}
+        alt="Logo Cardan Oeste"
+      />
+    </a>
+
+    <div class="flex lg:hidden">
+      <button
+        type="button"
+        class="inline-flex items-center justify-center rounded-md p-3 text-gray-900 hover:cursor-pointer"
+        id="mobile-menu-button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="sr-only">Abrir menu</span>
+        <i class="bi bi-list text-4xl"></i>
+      </button>
+    </div>
+
+    <div class="sm:hidden lg:flex lg:gap-x-12">
+      <a
+        href={astroConfig.site}
+        class="text-md font-semibold text-uppercase leading-6 text-blue-800 hover:text-blue-950"
+        >Pagina inicial</a
+      >
+      <a
+        href={astroConfig.site + "/sobre"}
+        class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
+        >A empresa</a
+      >
+      <a
+        href={astroConfig.site + "/servicos"}
+        class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
+        >Produtos</a
+      >
+      <a
+        href={astroConfig.site + "/contato"}
+        class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
+        >Fale conosco</a
+      >
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div class="animate-fade-in" id="mobile-menu" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div
+      class="absolute z-50 top-20 inset-0 mt-8 sm:hidden md:hidden flex justify-center align-middle overflow-x-hidden bg-slate-400 bg-opacity-75"
     >
-      <div class="flex lg:flex-1">
-        <a href={astroConfig.site} class="-m-1.5 p-1.5">
-          <span class="sr-only">Cardan Oeste</span>
-          <img
-            class="absolute h-28 w-auto top-2 z-40"
-            src={astroConfig.site +
-              "/images/logo-ilustrativo-removebg-preview.png"}
-            alt="Logo Cardan Oeste"
-          />
-        </a>
-      </div>
-
-      <div class="flex md:hidden">
-        <button
-          type="button"
-          class="inline-flex bg-violet-200 items-center justify-center rounded-md p-3 text-gray-900 hover:cursor-pointer hover:bg-violet-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500"
-          id="mobile-menu-button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span class="sr-only">Abrir menu</span>
-          <i class="bi bi-list text-4xl"></i>
-        </button>
-      </div>
-
-      <div class="hidden lg:flex lg:gap-x-12 h-full w-full flex-shrink">
+      <div class="">
         <a
           href={astroConfig.site}
-          class="text-md font-semibold text-uppercase leading-6 text-blue-800 hover:text-blue-950"
-          >Pagina inicial</a
+          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-blue-900 transition-opacity"
+          >Página inicial</a
         >
         <a
           href={astroConfig.site + "/sobre"}
-          class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
+          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
           >A empresa</a
         >
         <a
-          href={astroConfig.site + "/servicos"}
-          class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
+          href={astroConfig.site + "/produtos"}
+          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
           >Produtos</a
         >
         <a
           href={astroConfig.site + "/contato"}
-          class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
-          >Fale conosco</a
+          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
+          >Contato</a
         >
       </div>
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div
-      class="md:hidden animate-fade-in"
-      id="mobile-menu"
-      role="dialog"
-      aria-modal="true"
-    >
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-
-      <div
-        class="absolute z-50 top-20 inset-0 mt-8 sm:hidden md:hidden flex justify-center align-middle overflow-x-hidden bg-slate-400 bg-opacity-75"
-      >
-        <div class="">
-          <a
-            href={astroConfig.site}
-            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-blue-900 transition-opacity"
-            >Página inicial</a
-          >
-          <a
-            href={astroConfig.site + "/sobre"}
-            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
-            >A empresa</a
-          >
-          <a
-            href={astroConfig.site + "/produtos"}
-            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
-            >Produtos</a
-          >
-          <a
-            href={astroConfig.site + "/contato"}
-            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
-            >Contato</a
-          >
-        </div>
-      </div>
     </div>
-  </header>
-</div>
+  </div>
+</header>
 
 <script>
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  mobileMenuButton?.addEventListener("click", () => {
-    const menuList = document.getElementById("mobile-menu");
-    menuList?.classList.toggle("hidden");
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    mobileMenuButton?.addEventListener("click", () => {
+      document.getElementById("mobile-menu")?.classList.toggle("hidden");
+    });
   });
 </script>
