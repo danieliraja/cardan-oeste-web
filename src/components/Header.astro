@@ -16,6 +16,7 @@ import astroConfig from "../../astro.config.mjs";
       />
     </a>
 
+    <!-- Botão do menu mobile -->
     <div class="flex lg:hidden">
       <button
         type="button"
@@ -29,11 +30,12 @@ import astroConfig from "../../astro.config.mjs";
       </button>
     </div>
 
-    <div class="sm:hidden lg:flex lg:gap-x-12">
+    <!-- Menu desktop -->
+    <div class="hidden lg:flex lg:gap-x-12">
       <a
         href={astroConfig.site}
         class="text-md font-semibold text-uppercase leading-6 text-blue-800 hover:text-blue-950"
-        >Pagina inicial</a
+        >Página inicial</a
       >
       <a
         href={astroConfig.site + "/sobre"}
@@ -41,7 +43,7 @@ import astroConfig from "../../astro.config.mjs";
         >A empresa</a
       >
       <a
-        href={astroConfig.site + "/servicos"}
+        href={astroConfig.site + "/produtos"}
         class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
         >Produtos</a
       >
@@ -52,43 +54,54 @@ import astroConfig from "../../astro.config.mjs";
       >
     </div>
   </nav>
-  <!-- Mobile menu, show/hide based on menu open state. -->
-  <div class="animate-fade-in" id="mobile-menu" role="dialog" aria-modal="true">
-    <!-- Background backdrop, show/hide based on slide-over state. -->
-    <div
-      class="absolute z-50 top-20 inset-0 mt-8 sm:hidden md:hidden flex justify-center align-middle overflow-x-hidden bg-slate-400 bg-opacity-75"
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 top-20 z-50 hidden bg-orange-600 flex flex-col items-center justify-center space-y-4 transition-all transform -translate-y-full opacity-0"
+  >
+    <a
+      href={astroConfig.site}
+      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
+      >Página inicial</a
     >
-      <div class="">
-        <a
-          href={astroConfig.site}
-          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-blue-900 transition-opacity"
-          >Página inicial</a
-        >
-        <a
-          href={astroConfig.site + "/sobre"}
-          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
-          >A empresa</a
-        >
-        <a
-          href={astroConfig.site + "/produtos"}
-          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
-          >Produtos</a
-        >
-        <a
-          href={astroConfig.site + "/contato"}
-          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-900"
-          >Contato</a
-        >
-      </div>
-    </div>
+    <a
+      href={astroConfig.site + "/sobre"}
+      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
+      >A empresa</a
+    >
+    <a
+      href={astroConfig.site + "/produtos"}
+      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
+      >Produtos</a
+    >
+    <a
+      href={astroConfig.site + "/contato"}
+      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
+      >Contato</a
+    >
   </div>
 </header>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
     mobileMenuButton?.addEventListener("click", () => {
-      document.getElementById("mobile-menu")?.classList.toggle("hidden");
+      const isOpen = mobileMenu?.classList.contains("opacity-100");
+
+      if (isOpen) {
+        mobileMenu?.classList.remove("opacity-100", "translate-y-0");
+        mobileMenu?.classList.add("opacity-0", "-translate-y-full", "hidden");
+      } else {
+        mobileMenu?.classList.remove(
+          "opacity-0",
+          "-translate-y-full",
+          "hidden"
+        );
+        mobileMenu?.classList.add("opacity-100", "translate-y-0");
+      }
     });
   });
 </script>
