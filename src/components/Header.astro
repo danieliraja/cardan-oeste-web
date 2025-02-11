@@ -98,6 +98,7 @@ import astroConfig from "../../astro.config.mjs";
 <script>
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   mobileMenuButton?.addEventListener("click", () => {
-    document.getElementById("mobile-menu").classList.toggle("hidden");
+    const menuList = document.getElementById("mobile-menu");
+    menuList?.classList.toggle("hidden");
   });
 </script>
