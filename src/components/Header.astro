@@ -2,84 +2,111 @@
 import astroConfig from "../../astro.config.mjs";
 ---
 
-<header class="container mx-auto z-30">
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
   <nav
-    class="container flex items-center justify-between py-6 lg:px-0"
+    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 lg:px-8"
     aria-label="Global"
   >
-    <a href={astroConfig.site} class="-m-1.5 p-1.5">
+    <a href={astroConfig.site} class="flex items-center gap-3">
       <span class="sr-only">Cardan Oeste</span>
       <img
-        class="absolute h-28 w-auto top-2 z-40"
+        class="h-16 w-auto"
         src={astroConfig.site + "/images/logo-ilustrativo-removebg-preview.png"}
         alt="Logo Cardan Oeste"
       />
+      <div class="hidden text-left font-semibold text-slate-800 md:block">
+        <p class="text-xs tracking-[0.3em] uppercase text-blue-700">Cardan Oeste</p>
+        <p class="text-sm">Especialistas em transmissões pesadas</p>
+      </div>
     </a>
 
     <!-- Botão do menu mobile -->
-    <div class="flex lg:hidden">
+    <div class="flex items-center gap-4 lg:hidden">
+      <a
+        href="https://api.whatsapp.com/send?phone=5521974210745"
+        class="inline-flex items-center gap-2 rounded-full bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-green-600/40 transition hover:bg-green-700"
+      >
+        <i class="bi bi-whatsapp text-lg"></i>
+        <span>Falar agora</span>
+      </a>
       <button
         type="button"
-        class="inline-flex items-center justify-center rounded-md p-3 text-gray-900 hover:cursor-pointer"
+        class="inline-flex items-center justify-center rounded-full border border-gray-300 p-3 text-gray-900 transition hover:border-blue-600 hover:text-blue-700"
         id="mobile-menu-button"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
         <span class="sr-only">Abrir menu</span>
-        <i class="bi bi-list text-4xl"></i>
+        <i class="bi bi-list text-2xl"></i>
       </button>
     </div>
 
     <!-- Menu desktop -->
-    <div class="hidden lg:flex lg:gap-x-12">
+    <div class="hidden items-center gap-8 lg:flex">
       <a
-        href={astroConfig.site}
-        class="text-md font-semibold text-uppercase leading-6 text-blue-800 hover:text-blue-950"
-        >Página inicial</a
+        href={astroConfig.site + "#inicio"}
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        >Início</a
       >
       <a
-        href={astroConfig.site + "/sobre"}
-        class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
-        >A empresa</a
+        href={astroConfig.site + "#servicos"}
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        >Serviços</a
       >
       <a
-        href={astroConfig.site + "/produtos"}
-        class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
-        >Produtos</a
+        href={astroConfig.site + "#cardans"}
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        >Linha de cardans</a
       >
       <a
-        href={astroConfig.site + "/contato"}
-        class="text-md font-semibold leading-6 text-blue-800 hover:text-blue-950"
-        >Fale conosco</a
+        href={astroConfig.site + "#contato"}
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        >Contato</a
       >
+      <a
+        href="https://api.whatsapp.com/send?phone=5521974210745"
+        class="inline-flex items-center gap-2 rounded-full bg-green-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-green-600/40 transition hover:bg-green-700"
+      >
+        <i class="bi bi-whatsapp text-lg"></i>
+        <span>Orçamento imediato</span>
+      </a>
     </div>
   </nav>
 
   <!-- Mobile menu -->
   <div
     id="mobile-menu"
-    class="fixed inset-0 top-20 z-50 hidden bg-orange-600 flex flex-col items-center justify-center space-y-4 transition-all transform -translate-y-full opacity-0"
+    class="fixed inset-0 top-24 z-50 hidden bg-slate-900/95 px-6 pb-12 pt-8 text-white transition-all duration-300 ease-out transform -translate-y-full opacity-0"
   >
-    <a
-      href={astroConfig.site}
-      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
-      >Página inicial</a
-    >
-    <a
-      href={astroConfig.site + "/sobre"}
-      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
-      >A empresa</a
-    >
-    <a
-      href={astroConfig.site + "/produtos"}
-      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
-      >Produtos</a
-    >
-    <a
-      href={astroConfig.site + "/contato"}
-      class="block rounded-lg px-5 py-3 text-base font-semibold text-white hover:bg-blue-900 transition"
-      >Contato</a
-    >
+    <div class="mx-auto flex max-w-md flex-col gap-4">
+      <a
+        href={astroConfig.site + "#inicio"}
+        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        >Início</a
+      >
+      <a
+        href={astroConfig.site + "#servicos"}
+        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        >Serviços</a
+      >
+      <a
+        href={astroConfig.site + "#cardans"}
+        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        >Linha de cardans</a
+      >
+      <a
+        href={astroConfig.site + "#contato"}
+        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        >Contato</a
+      >
+      <a
+        href="https://api.whatsapp.com/send?phone=5521974210745"
+        class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-3 text-base font-semibold text-white shadow-lg shadow-green-600/40 transition hover:bg-green-700"
+      >
+        <i class="bi bi-whatsapp text-lg"></i>
+        <span>Orçamento imediato</span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -87,20 +114,32 @@ import astroConfig from "../../astro.config.mjs";
   document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
+    const menuLinks = mobileMenu?.querySelectorAll("a");
 
-    mobileMenuButton?.addEventListener("click", () => {
+    const toggleMenu = (forceClose = false) => {
       const isOpen = mobileMenu?.classList.contains("opacity-100");
+      const shouldOpen = forceClose ? false : !isOpen;
 
-      if (isOpen) {
+      if (shouldOpen) {
+        mobileMenu?.classList.remove("opacity-0", "-translate-y-full", "hidden");
+        mobileMenu?.classList.add("opacity-100", "translate-y-0");
+        mobileMenuButton?.setAttribute("aria-expanded", "true");
+      } else {
         mobileMenu?.classList.remove("opacity-100", "translate-y-0");
         mobileMenu?.classList.add("opacity-0", "-translate-y-full", "hidden");
-      } else {
-        mobileMenu?.classList.remove(
-          "opacity-0",
-          "-translate-y-full",
-          "hidden"
-        );
-        mobileMenu?.classList.add("opacity-100", "translate-y-0");
+        mobileMenuButton?.setAttribute("aria-expanded", "false");
+      }
+    };
+
+    mobileMenuButton?.addEventListener("click", () => toggleMenu());
+
+    menuLinks?.forEach((link) =>
+      link.addEventListener("click", () => toggleMenu(true))
+    );
+
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "Escape") {
+        toggleMenu(true);
       }
     });
   });
