@@ -1,196 +1,550 @@
 ---
-import astroConfig from "../../astro.config.mjs";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Cardan Oeste - Reparadora de cardans">
-  <div class="bg-[url('/images/banner.png')] bg-cover bg-center">
-    <div class="relative px-6 lg:px-8">
-      <div
-        class="mx-auto max-w-2xl py-32 px-12 sm:py-48 lg:py-56 backdrop-blur-sm"
-      >
-        <div class="text-center p-4">
-          <h1
-            class="text-4xl tracking-tight text-gray-850 font-extrabold sm:text-6xl"
-          >
-            Diagnóstico preciso e reparo rápido para você seguir viagem
+<Layout title="Cardan Oeste - Engenharia em cardans e transmissões">
+  <main class="overflow-hidden bg-slate-950 text-slate-100">
+    <section id="inicio" class="relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.2),_transparent_60%)]"></div>
+        <div class="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-slate-950"></div>
+        <img
+          src="/images/banner.png"
+          alt="Equipe Cardan Oeste ajustando cardan"
+          class="h-full w-full object-cover opacity-20"
+        />
+      </div>
+
+      <div class="relative mx-auto grid max-w-6xl gap-16 px-6 pb-32 pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+        <div class="flex flex-col gap-8">
+          <span class="inline-flex max-w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-cyan-200">
+            <i class="bi bi-lightning-charge"></i>
+            Resposta imediata
+          </span>
+          <h1 class="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-[3.2rem]">
+            Cardans balanceados, monitorados e entregues com engenharia de precisão
           </h1>
-          <hr class="w-48 border-4 border-blue-800 mx-auto mt-4" />
-          <p class="mt-6 text-lg text-gray-900 font-medium">
-            Temos a solução ideal para o seu eixo de transmissão
+          <p class="max-w-xl text-lg text-blue-100">
+            A Cardan Oeste combina laboratório metrológico, fábrica própria e logística dedicada para garantir torque constante, menos paradas e rastreabilidade completa para sua operação rodoviária ou industrial.
           </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
+          <div class="flex flex-col gap-4 sm:flex-row">
             <a
               href="https://api.whatsapp.com/send?phone=5521974210745"
-              class="rounded-md bg-green-700 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              ><i class="bi bi-whatsapp pr-2"></i>Entrar em contato</a
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-lg shadow-blue-600/40 transition hover:bg-blue-700"
             >
+              <i class="bi bi-whatsapp text-xl"></i>
+              Atendimento imediato
+            </a>
+            <a
+              href="#cardans"
+              class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-3 text-base font-semibold text-white transition hover:border-blue-400 hover:text-blue-100"
+            >
+              <i class="bi bi-diagram-3"></i>
+              Ver soluções em cardans
+            </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="py-12 bg-white-950">
-    <div class="container mx-auto">
-      <h1 class="text-3xl font-bold text-blue-900 px-4 mb-8">
-        Cardan Oeste reparadora de cardans
-      </h1>
-      <p class="text-2xl text-slate-900 px-4">
-        É a sua escolha ideal como fornecedor para construção, reparo e
-        manutenção de eixos de transmissão em todo o Rio de Janeiro. Nossa ampla
-        gama de produtos inclui tamanhos padrão, assim como eixos de transmissão
-        pesados ou designs especiais para veículos comerciais e indústriais.
-      </p>
-    </div>
-  </section>
-  <section class="py-8 bg-gray-100">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-slate-600 px-4">
-        Vantagens da empresa
-      </h2>
-      <hr class="my-4 border-gray-200 border-1" />
-      <div class="grid sm:grid-cols-1 lg:grid-cols-4 gap-8">
-        <div
-          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6 mx-auto"
-        >
-          <div
-            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
-          >
-            <i class="bi bi-patch-check-fill text-3xl text-orange-600"></i>
-          </div>
-
-          <div class="py-4 mt-4">
-            <div class="font-bold text-xl text-gray-800 mb-4">
-              Expertise Comprovada
+          <dl class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-5 text-left">
+              <dt class="text-[0.65rem] uppercase tracking-[0.3em] text-blue-200">Anos de engenharia</dt>
+              <dd class="mt-2 text-3xl font-semibold text-white">24</dd>
             </div>
-            <ul class="list-disc list-inside text-base">
-              <ol>Mais de 20 anos em reparos de cardan.</ol>
-              <ol>Mais de 5000 reparos realizados com sucesso.</ol>
-              <ol>Técnicos altamente qualificados e experientes.</ol>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6 mx-auto"
-        >
-          <div
-            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
-          >
-            <i class="bi bi-clock-fill text-3xl text-orange-600"></i>
-          </div>
-
-          <div class="py-4 mt-4">
-            <div class="font-bold text-xl text-gray-800 mb-4">
-              Rapidez e Precisão
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-5 text-left">
+              <dt class="text-[0.65rem] uppercase tracking-[0.3em] text-blue-200">Cardans/mês</dt>
+              <dd class="mt-2 text-3xl font-semibold text-white">+420</dd>
             </div>
-            <ul class="list-disc list-inside text-base">
-              <ol>Diagnóstico completo e preciso do cardan.</ol>
-              <ol>Reparo rápido e eficiente com ferramentas modernas.</ol>
-              <ol>
-                Grande estoque de peças originais para agilizar o processo.
-              </ol>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6 mx-auto"
-        >
-          <div
-            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
-          >
-            <i class="bi bi-star-fill text-3xl text-orange-600"></i>
-          </div>
-
-          <div class="py-4 mt-4">
-            <div class="font-bold text-xl text-gray-800 mb-4">
-              Qualidade e Segurança
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-5 text-left">
+              <dt class="text-[0.65rem] uppercase tracking-[0.3em] text-blue-200">Tempo médio</dt>
+              <dd class="mt-2 text-3xl font-semibold text-white">18h</dd>
             </div>
-            <ul class="list-disc list-inside text-base">
-              <ol>Garantia de qualidade para serviços e peças de reposição.</ol>
-              <ol>
-                Peças originais e de alta qualidade para o bom funcionamento do
-                veículo.
-              </ol>
-              <ol>
-                Serviços seguem rigorosos padrões de qualidade e segurança.
-              </ol>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="max-w-sm rounded overflow-hidden border border-gray-200 p-6 mx-auto"
-        >
-          <div
-            class="flex border-2 rounded-full w-16 h-16 items-center justify-center"
-          >
-            <i class="bi bi-cash-stack text-3xl text-orange-600"></i>
-          </div>
-
-          <div class="py-4 mt-4">
-            <div class="font-bold text-xl text-gray-800 mb-4">
-              Preço Justo e Transparência
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-5 text-left">
+              <dt class="text-[0.65rem] uppercase tracking-[0.3em] text-blue-200">Índice de retorno</dt>
+              <dd class="mt-2 text-3xl font-semibold text-white">0,7%</dd>
             </div>
-            <ul class="list-disc list-inside text-base">
-              <ol>Preços justos e competitivos para todos os serviços.</ol>
-              <ol>Orçamento detalhado antes de iniciar qualquer serviço.</ol>
-              <ol>Transparência e bom relacionamento com os clientes.</ol>
-            </ul>
-          </div>
+          </dl>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="py-8 bg-white-950">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col gap-6 md:flex-row">
-        <div class="w-full md:w-1/2">
-          <h3 class="text-3xl font-bold mb-8 text-blue-900">
-            Reparo de cardan e eixo de transmissão
-          </h3>
-
-          <ul class="list-disc list-inside text-1xl">
-            <li>
-              Realizamos um teste de equilíbrio e verificação de desgaste.
+        <aside class="relative rounded-3xl border border-white/15 bg-white/10 p-8 shadow-[0_35px_120px_-40px_rgba(14,116,144,0.8)] backdrop-blur">
+          <div class="absolute -top-16 right-10 hidden h-32 w-32 rounded-full bg-cyan-400/40 blur-3xl lg:block"></div>
+          <h2 class="text-lg font-semibold tracking-[0.25em] text-blue-100">Monitoramento 360°</h2>
+          <p class="mt-4 text-sm leading-relaxed text-blue-50">
+            Cada peça recebe QR Code único, laudos com fotos e medições, além de histórico de intervenções. Assim sua equipe conhece torque, folga, balanceamento e data da próxima inspeção com apenas um clique.
+          </p>
+          <ul class="mt-6 space-y-4 text-sm text-blue-50">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-cyan-300"></span>
+              Engenharia própria credenciada ao CREA com responsáveis técnicos dedicados.
             </li>
-            <li>
-              Desmontamos seu eixo cardã para uma inspeção minuciosa de todas as
-              peças.
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-cyan-300"></span>
+              Balanceadoras eletrônicas com relatório digital anexado ao orçamento.
             </li>
-            <li>Substituímos peças defeituosas por peças originais.</li>
-            <li>
-              Montamos as juntas de acordo com as especificações dos desenhos
-              técnicos respectivos.
-            </li>
-            <li>
-              Montamos seu eixo cardã incluindo ajuste preciso e ajuste do eixo.
-            </li>
-            <li>
-              Soldamos seus eixos cardã de acordo com os certificados de
-              qualidade.
-            </li>
-            <li>Ajustamos seu eixo cardã na prensa de alinhamento.</li>
-            <li>
-              Realizamos um balanceamento dinâmico do seu eixo cardã de acordo
-              com o desenho técnico.
-            </li>
-            <li>
-              Lubrificamos as buchas dos rolamentos com lubrificante especial.
-            </li>
-            <li>
-              Realizamos uma inspeção final de acordo com o registro de teste e
-              adicionamos uma etiqueta Cardan Oeste
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-cyan-300"></span>
+              Frota de coleta e entrega com rastreamento e confirmação por assinatura digital.
             </li>
           </ul>
+          <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-blue-100">
+            <p class="font-semibold uppercase tracking-[0.3em] text-cyan-200">Segmentos atendidos</p>
+            <p class="mt-3 leading-relaxed">
+              Saneamento, ônibus urbanos, mineração, sucroalcooleiro, cimento, siderurgia, logística portuária e plataformas industriais.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre" class="relative border-y border-white/10 bg-slate-950 py-24">
+      <div class="absolute left-1/2 top-0 hidden h-80 w-80 -translate-x-1/2 rounded-full bg-blue-600/30 blur-3xl lg:block"></div>
+      <div class="relative mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200">Quem somos</span>
+          <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Integramos oficina, fábrica e laboratório para cardans de alta performance</h2>
+          <p class="mt-4 text-base text-blue-100">
+            Desde 1999 cuidamos da transmissão de torque de caminhões, ônibus, utilitários 4x4 e equipamentos industriais. Unimos estrutura fabril, processos certificados e equipe consultiva para prolongar a vida útil do seu cardan e reduzir vibração em campo.
+          </p>
         </div>
-        <div class="w-full md:w-1/2 flex justify-center align-middle flex-1">
-          <img
-            class="max-h-80"
-            src="images/din_xs_sae_flanged_1200x705-1030x605-1.jpg"
-            alt="reparo em 10 passos para o cardan"
-          />
+
+        <div class="mt-16 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-10 backdrop-blur">
+            <h3 class="text-lg font-semibold text-white">Diferenciais auditáveis</h3>
+            <ul class="mt-6 space-y-4 text-sm text-blue-100">
+              <li class="flex items-start gap-3">
+                <i class="bi bi-patch-check-fill text-lg text-cyan-300"></i>
+                ISO 9001 em implementação e rastreabilidade via QR Code em cada cardan.
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="bi bi-hdd-network text-lg text-cyan-300"></i>
+                Sistema próprio que avisa sua equipe quando a próxima manutenção preventiva estiver próxima.
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="bi bi-truck text-lg text-cyan-300"></i>
+                Frota dedicada com motoristas treinados para desmontagem e montagem em campo.
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="bi bi-ev-front text-lg text-cyan-300"></i>
+                Estoque de cruzetas, mancais e flanges premium para reposição imediata.
+              </li>
+            </ul>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-cyan-400/40">
+              <div>
+                <h3 class="text-lg font-semibold text-white">Consultoria técnica</h3>
+                <p class="mt-3 text-sm text-blue-100">
+                  Diagnóstico em campo, medições, análise de vibração e definição da melhor estratégia entre reparo, substituição parcial ou fabricação completa.
+                </p>
+              </div>
+              <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+                <i class="bi bi-graph-up-arrow"></i>
+                Redução de custo total
+              </span>
+            </article>
+            <article class="group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-cyan-400/40">
+              <div>
+                <h3 class="text-lg font-semibold text-white">Fábrica própria</h3>
+                <p class="mt-3 text-sm text-blue-100">
+                  Usinagem CNC, soldagem certificada e balanceamento dinâmico com laudos digitais anexados ao protocolo de entrega.
+                </p>
+              </div>
+              <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+                <i class="bi bi-speedometer"></i>
+                Precisão centesimal
+              </span>
+            </article>
+            <article class="group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-cyan-400/40">
+              <div>
+                <h3 class="text-lg font-semibold text-white">Centro de testes</h3>
+                <p class="mt-3 text-sm text-blue-100">
+                  Balanceamento eletrônico de até 8 metros, testes de folga axial e radial, ensaios não destrutivos e emissão de relatórios comparativos.
+                </p>
+              </div>
+              <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+                <i class="bi bi-shield-check"></i>
+                Garantia total
+              </span>
+            </article>
+            <article class="group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-cyan-400/40">
+              <div>
+                <h3 class="text-lg font-semibold text-white">Pós-atendimento</h3>
+                <p class="mt-3 text-sm text-blue-100">
+                  Acompanhamento técnico pós-serviço com análise de telemetria, ajustes preventivos e reposição em garantia.
+                </p>
+              </div>
+              <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+                <i class="bi bi-arrow-repeat"></i>
+                Operação sem paradas
+              </span>
+            </article>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="servicos" class="relative bg-slate-900 py-24">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.18),_transparent_65%)]"></div>
+      <div class="relative mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200">Serviços 360°</span>
+          <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Tudo o que o seu cardan precisa em um único parceiro</h2>
+          <p class="mt-5 text-base text-blue-100">
+            Operamos 3 turnos para atender demandas emergenciais e contratos recorrentes. Nossa equipe avalia a condição do eixo, define o plano de ação e entrega com documentação técnica completa.
+          </p>
+          <div class="mt-10 space-y-6 text-sm text-blue-100">
+            <p class="flex items-start gap-3">
+              <i class="bi bi-chat-left-dots text-lg text-cyan-300"></i>
+              Atendimento consultivo via WhatsApp, telefone, e visitas em campo com engenheiros responsáveis.
+            </p>
+            <p class="flex items-start gap-3">
+              <i class="bi bi-clipboard2-data text-lg text-cyan-300"></i>
+              Relatórios fotográficos, medições, geometria e recomendações preventivas por veículo.
+            </p>
+            <p class="flex items-start gap-3">
+              <i class="bi bi-shield-lock text-lg text-cyan-300"></i>
+              Garantias reais com rastreio do cardan e atendimento prioritário em caso de necessidade.
+            </p>
+          </div>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-[0_30px_80px_-40px_rgba(59,130,246,0.4)]">
+            <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-cyan-500/20 blur-2xl"></div>
+            <h3 class="text-lg font-semibold text-white">Reparos emergenciais</h3>
+            <p class="mt-3 text-sm text-blue-100">
+              Troca de cruzetas, mancais, flanges, tubos, solda certificada e balanceamento final para retorno rápido à operação.
+            </p>
+            <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+              <i class="bi bi-stopwatch"></i>
+              Entrega média em 18h
+            </span>
+          </article>
+          <article class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-[0_30px_80px_-40px_rgba(59,130,246,0.4)]">
+            <div class="absolute -left-10 bottom-0 h-28 w-28 rounded-full bg-blue-500/10 blur-2xl"></div>
+            <h3 class="text-lg font-semibold text-white">Planos preventivos</h3>
+            <p class="mt-3 text-sm text-blue-100">
+              Cronogramas personalizados para frotas, checklists, lubrificação, substituição preventiva e estoque consignado.
+            </p>
+            <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+              <i class="bi bi-calendar-check"></i>
+              Cobertura nacional
+            </span>
+          </article>
+          <article class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-[0_30px_80px_-40px_rgba(59,130,246,0.4)]">
+            <div class="absolute right-0 top-1/2 h-24 w-24 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-2xl"></div>
+            <h3 class="text-lg font-semibold text-white">Fabricação sob medida</h3>
+            <p class="mt-3 text-sm text-blue-100">
+              Projetos completos com cálculo de torque, seleção de materiais, usinagem CNC e certificação dimensional.
+            </p>
+            <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+              <i class="bi bi-diagram-3"></i>
+              Até 8m de comprimento
+            </span>
+          </article>
+          <article class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-[0_30px_80px_-40px_rgba(59,130,246,0.4)]">
+            <div class="absolute -bottom-8 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-blue-600/10 blur-2xl"></div>
+            <h3 class="text-lg font-semibold text-white">Equipe móvel</h3>
+            <p class="mt-3 text-sm text-blue-100">
+              Balanceamento em campo, remoção e instalação, alinhamento e suporte emergencial para evitar guinchos e paradas longas.
+            </p>
+            <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+              <i class="bi bi-truck"></i>
+              Plantão 24/7
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-white/5 bg-slate-950 py-20">
+      <div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 lg:flex-row lg:items-center lg:px-8">
+        <div class="w-full lg:w-1/2">
+          <h2 class="text-3xl font-semibold text-white sm:text-4xl">Segmentos que confiam</h2>
+          <p class="mt-4 text-base text-blue-100">
+            Adaptamos processos, materiais e prazos para atender desde operações críticas 24/7 até produção sazonal. Nosso time entende a aplicação e recomenda o melhor pacote técnico para cada segmento.
+          </p>
+        </div>
+        <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-1/2">
+          {[
+            "Transporte urbano e rodoviário",
+            "Agronegócio e implementos",
+            "Construção pesada e mineração",
+            "Indústrias de energia e saneamento",
+            "Portos, estaleiros e offshore",
+            "Veículos especiais e 4x4"
+          ].map((segmento) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-sm font-semibold tracking-wide text-blue-100">
+              {segmento}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="cardans" class="relative bg-slate-900 py-24">
+      <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-slate-950/60 to-transparent"></div>
+      <div class="relative mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200">Linha de cardans</span>
+          <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Componentes homologados e customização completa</h2>
+          <p class="mt-4 text-base text-blue-100">
+            Produzimos e recondicionamos cardans automotivos, industriais e especiais com componentes originais Spicer, Meritor, Voith, ZF e fabricantes certificados. Cada projeto recebe memorial descritivo e curva de torque.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="space-y-6">
+            <article class="rounded-3xl border border-white/10 bg-slate-950/70 p-8 shadow-[0_30px_90px_-50px_rgba(45,212,191,0.6)]">
+              <h3 class="text-xl font-semibold text-white">Cardans automotivos pesados</h3>
+              <p class="mt-3 text-sm text-blue-100">
+                Caminhões, ônibus urbanos, articulados, rodoviários e veículos fora-de-estrada. Opções reforçadas para transmissões de alto torque e aplicações severas.
+              </p>
+              <ul class="mt-5 space-y-2 text-sm text-blue-100">
+                <li class="flex items-center gap-2"><i class="bi bi-check2-circle text-cyan-300"></i> Kits completos de cruzetas, mancais e flanges.</li>
+                <li class="flex items-center gap-2"><i class="bi bi-check2-circle text-cyan-300"></i> Balanceamento dinâmico com laudo digital.</li>
+                <li class="flex items-center gap-2"><i class="bi bi-check2-circle text-cyan-300"></i> Tratamentos para ambientes corrosivos.</li>
+              </ul>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-slate-950/70 p-8 shadow-[0_30px_90px_-50px_rgba(45,212,191,0.6)]">
+              <h3 class="text-xl font-semibold text-white">Cardans industriais</h3>
+              <p class="mt-3 text-sm text-blue-100">
+                Eixos para plantas industriais, siderurgia, portos, geradores, máquinas agrícolas e linhas especiais com especificações sob desenho.
+              </p>
+              <ul class="mt-5 space-y-2 text-sm text-blue-100">
+                <li class="flex items-center gap-2"><i class="bi bi-check2-circle text-cyan-300"></i> Projetos dimensionados por software CAD/CAE.</li>
+                <li class="flex items-center gap-2"><i class="bi bi-check2-circle text-cyan-300"></i> Balanceamento em até 3 planos e testes não destrutivos.</li>
+                <li class="flex items-center gap-2"><i class="bi bi-check2-circle text-cyan-300"></i> Documentação completa para auditorias.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="relative flex flex-col gap-6">
+            <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-transparent p-8 backdrop-blur">
+              <h3 class="text-xl font-semibold text-white">Kits de reposição imediata</h3>
+              <p class="mt-3 text-sm text-blue-100">
+                Disponibilidade pronta entrega de cruzetas, mancais, luvas, flanges e componentes originais com rastreio e controle de lote.
+              </p>
+              <p class="mt-4 text-sm text-blue-100">
+                Estoque consignado para contratos e plano de reposição automática baseado em consumo real.
+              </p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-8 backdrop-blur">
+              <h3 class="text-xl font-semibold text-white">Upgrade e customização</h3>
+              <p class="mt-3 text-sm text-blue-100">
+                Reengenharia para aumento de capacidade de carga, adaptação de acoplamentos, uso de materiais especiais e aplicação de pintura anticorrosiva de alto desempenho.
+              </p>
+              <a
+                href="https://api.whatsapp.com/send?phone=5521974210745"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-white"
+              >
+                Consultar catálogo personalizado
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+              <h3 class="text-xl font-semibold text-white">Integração digital</h3>
+              <p class="mt-3 text-sm text-blue-100">
+                API para integração com sistemas de gestão de frota e ERPs, enviando status do cardan e lembretes automáticos para manutenção.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-white/5 bg-slate-950 py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
+          <div>
+            <h2 class="text-3xl font-semibold text-white sm:text-4xl">Processo controlado do recebimento à entrega</h2>
+            <p class="mt-4 text-base text-blue-100">
+              Um fluxo transparente, documentado e acompanhado em tempo real para você saber exatamente em que etapa está cada cardan.
+            </p>
+            <div class="mt-10 grid gap-6">
+              {[
+                {
+                  titulo: "Coleta e inspeção inicial",
+                  descricao: "Retirada agendada, inspeção visual, medições em bancada e registro fotográfico com emissão do protocolo digital.",
+                },
+                {
+                  titulo: "Engenharia aplicada",
+                  descricao: "Desmontagem, análise dimensional, definição de reparo ou fabricação e aprovação com orçamento detalhado.",
+                },
+                {
+                  titulo: "Execução e testes",
+                  descricao: "Soldagem certificada, montagem em balanceadora eletrônica, laudos digitais e pintura de proteção.",
+                },
+                {
+                  titulo: "Entrega assistida",
+                  descricao: "Aplicação de QR Code, relatório final, instalação em campo quando necessário e acompanhamento pós-serviço.",
+                },
+              ].map((item, index) => (
+                <div class="flex gap-5 rounded-3xl border border-white/10 bg-white/5 p-6">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 text-sm font-semibold text-cyan-200">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 class="text-lg font-semibold text-white">{item.titulo}</h3>
+                    <p class="mt-2 text-sm text-blue-100">{item.descricao}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-8">
+            <h3 class="text-lg font-semibold text-white">Certificações e segurança</h3>
+            <ul class="mt-6 space-y-4 text-sm text-blue-100">
+              <li class="flex items-start gap-3">
+                <i class="bi bi-shield-shaded text-lg text-cyan-300"></i>
+                Procedimentos baseados em ISO 9001, NR-12 e NR-13 com rastreabilidade completa.
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="bi bi-cpu text-lg text-cyan-300"></i>
+                Sensores IoT monitoram vibração e temperatura para ajustes preventivos.
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="bi bi-people text-lg text-cyan-300"></i>
+                Treinamento contínuo para motoristas, soldadores e montadores seguindo normas internacionais.
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="bi bi-folder-check text-lg text-cyan-300"></i>
+                Biblioteca digital com laudos, certificados de materiais e histórico por equipamento.
+              </li>
+            </ul>
+            <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 text-sm text-blue-100">
+              <p class="font-semibold uppercase tracking-[0.3em] text-cyan-200">Indicadores que acompanhamos</p>
+              <ul class="mt-4 space-y-2">
+                <li>• Vibração residual após balanceamento</li>
+                <li>• Temperatura em mancais durante testes</li>
+                <li>• Vida útil projetada vs. real por cardan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-900 py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200">Resultados em números</span>
+            <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Mais disponibilidade e confiança para quem depende da frota</h2>
+            <p class="mt-4 text-base text-blue-100">
+              Veja o impacto dos nossos programas de manutenção nos clientes que confiam em nossa engenharia.
+            </p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-blue-100">
+              <p class="text-3xl font-semibold text-white">-42%</p>
+              <p class="mt-2">Redução média em quebras de transmissão em frotas rodoviárias após 6 meses de contrato.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-blue-100">
+              <p class="text-3xl font-semibold text-white">+28%</p>
+              <p class="mt-2">Incremento no intervalo entre paradas programadas em equipamentos industriais.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-blue-100">
+              <p class="text-3xl font-semibold text-white">94%</p>
+              <p class="mt-2">Índice de satisfação em pesquisas pós-serviço com gestores de manutenção.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-blue-100">
+              <p class="text-3xl font-semibold text-white">72h</p>
+              <p class="mt-2">Prazo máximo para fabricação completa de cardans especiais sob desenho.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-white/10 bg-slate-950 py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200">Depoimentos</span>
+            <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Confiança comprovada por quem roda com a gente</h2>
+            <p class="mt-4 text-base text-blue-100">
+              Nossa parceria com gestores de frota e engenheiros industriais gera resultados mensuráveis. Conheça alguns relatos.
+            </p>
+          </div>
+          <div class="grid gap-6">
+            {[
+              {
+                depoimento: "Em menos de dois meses eliminamos vibrações críticas em 60 ônibus. Recebemos relatórios completos e suporte para treinar nossa equipe.",
+                nome: "Rodrigo Santos",
+                cargo: "Coordenador de manutenção - Consórcio BRT",
+              },
+              {
+                depoimento: "A Cardan Oeste entrega cardans especiais com documentação para auditorias e mantém estoque consignado que evita paradas na planta.",
+                nome: "Ana Paula Figueiredo",
+                cargo: "Engenheira de produção - Complexo Siderúrgico",
+              },
+            ].map((item) => (
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p class="text-sm text-blue-100">“{item.depoimento}”</p>
+                <p class="mt-4 text-sm font-semibold text-white">{item.nome}</p>
+                <p class="text-xs uppercase tracking-[0.3em] text-blue-200">{item.cargo}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="relative bg-slate-900 py-24">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(14,165,233,0.15),_transparent_65%)]"></div>
+      <div class="relative mx-auto max-w-5xl rounded-3xl border border-white/10 bg-slate-950/80 p-10 shadow-[0_40px_120px_-50px_rgba(14,116,144,0.7)]">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div class="space-y-6">
+            <span class="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200">Contato imediato</span>
+            <h2 class="text-3xl font-semibold text-white">Vamos diagnosticar seu cardan hoje</h2>
+            <p class="text-base text-blue-100">
+              Envie os detalhes do equipamento, fotos ou vídeos e receba orientação técnica com orçamento em poucos minutos.
+            </p>
+            <div class="space-y-4 text-sm text-blue-100">
+              <p class="flex items-center gap-3">
+                <i class="bi bi-telephone-outbound text-lg text-cyan-300"></i>
+                <a href="tel:+5521974210745" class="transition hover:text-white">(21) 97421-0745</a>
+              </p>
+              <p class="flex items-center gap-3">
+                <i class="bi bi-envelope text-lg text-cyan-300"></i>
+                <a href="mailto:contato@cardanoeste.com.br" class="transition hover:text-white">contato@cardanoeste.com.br</a>
+              </p>
+              <p class="flex items-center gap-3">
+                <i class="bi bi-geo-alt text-lg text-cyan-300"></i>
+                Base operacional em Campo Grande - Rio de Janeiro/RJ
+              </p>
+            </div>
+            <a
+              href="https://api.whatsapp.com/send?phone=5521974210745"
+              class="inline-flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/40 transition hover:bg-blue-700"
+            >
+              <i class="bi bi-whatsapp text-xl"></i>
+              Falar com o time técnico agora
+            </a>
+          </div>
+          <form class="grid gap-4 text-sm text-slate-900">
+            <div class="grid gap-2">
+              <label class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200" for="nome">Nome</label>
+              <input id="nome" type="text" required class="rounded-2xl border border-white/20 bg-white/80 px-4 py-3 outline-none transition focus:border-blue-500" placeholder="Seu nome" />
+            </div>
+            <div class="grid gap-2">
+              <label class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200" for="empresa">Empresa</label>
+              <input id="empresa" type="text" class="rounded-2xl border border-white/20 bg-white/80 px-4 py-3 outline-none transition focus:border-blue-500" placeholder="Nome da empresa" />
+            </div>
+            <div class="grid gap-2">
+              <label class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200" for="telefone">Telefone</label>
+              <input id="telefone" type="tel" required class="rounded-2xl border border-white/20 bg-white/80 px-4 py-3 outline-none transition focus:border-blue-500" placeholder="(00) 00000-0000" />
+            </div>
+            <div class="grid gap-2">
+              <label class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200" for="mensagem">Como podemos ajudar?</label>
+              <textarea id="mensagem" rows="4" class="rounded-2xl border border-white/20 bg-white/80 px-4 py-3 outline-none transition focus:border-blue-500" placeholder="Compartilhe a necessidade do seu cardan"></textarea>
+            </div>
+            <button type="submit" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-cyan-400">
+              Enviar mensagem
+              <i class="bi bi-send"></i>
+            </button>
+            <p class="text-xs text-blue-200">
+              Ao enviar você autoriza contato comercial e aceita receber notificações sobre o status do serviço.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
