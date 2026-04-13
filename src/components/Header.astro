@@ -1,21 +1,17 @@
----
-import astroConfig from "../../astro.config.mjs";
----
-
 <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
   <nav
     class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 lg:px-8"
     aria-label="Global"
   >
-    <a href={astroConfig.site} class="flex items-center gap-3">
+    <a href="/" class="flex items-center gap-3">
       <span class="sr-only">Cardan Oeste</span>
       <img
         class="h-16 w-auto"
-        src={astroConfig.site + "/images/logo-ilustrativo-removebg-preview.png"}
+        src="/images/logo-ilustrativo-removebg-preview.png"
         alt="Logo Cardan Oeste"
       />
       <div class="hidden text-left font-semibold text-slate-800 md:block">
-        <p class="text-xs tracking-[0.3em] uppercase text-blue-700">Cardan Oeste</p>
+        <p class="text-xs tracking-[0.3em] uppercase text-[#de3f21]">Cardan Oeste</p>
         <p class="text-sm">Especialistas em transmissões pesadas</p>
       </div>
     </a>
@@ -23,7 +19,9 @@ import astroConfig from "../../astro.config.mjs";
     <!-- Botão do menu mobile -->
     <div class="flex items-center gap-4 lg:hidden">
       <a
-        href="https://api.whatsapp.com/send?phone=5521974210745"
+        href="https://api.whatsapp.com/send?phone=5521964210745"
+        target="_blank"
+        rel="noopener noreferrer"
         class="inline-flex items-center gap-2 rounded-full bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-green-600/40 transition hover:bg-green-700"
       >
         <i class="bi bi-whatsapp text-lg"></i>
@@ -31,7 +29,7 @@ import astroConfig from "../../astro.config.mjs";
       </a>
       <button
         type="button"
-        class="inline-flex items-center justify-center rounded-full border border-gray-300 p-3 text-gray-900 transition hover:border-blue-600 hover:text-blue-700"
+        class="inline-flex items-center justify-center rounded-full border border-gray-300 p-3 text-gray-900 transition hover:border-[#de3f21] hover:text-[#de3f21]"
         id="mobile-menu-button"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -44,27 +42,29 @@ import astroConfig from "../../astro.config.mjs";
     <!-- Menu desktop -->
     <div class="hidden items-center gap-8 lg:flex">
       <a
-        href={astroConfig.site + "#inicio"}
-        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        href="/#inicio"
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-[#b7331b]"
         >Início</a
       >
       <a
-        href={astroConfig.site + "#servicos"}
-        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        href="/#servicos"
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-[#b7331b]"
         >Serviços</a
       >
       <a
-        href={astroConfig.site + "#cardans"}
-        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        href="/#cardans"
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-[#b7331b]"
         >Linha de cardans</a
       >
       <a
-        href={astroConfig.site + "#contato"}
-        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-blue-800"
+        href="/#contato"
+        class="text-sm font-medium uppercase tracking-wide text-slate-700 transition hover:text-[#b7331b]"
         >Contato</a
       >
       <a
-        href="https://api.whatsapp.com/send?phone=5521974210745"
+        href="https://api.whatsapp.com/send?phone=5521964210745"
+        target="_blank"
+        rel="noopener noreferrer"
         class="inline-flex items-center gap-2 rounded-full bg-green-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-green-600/40 transition hover:bg-green-700"
       >
         <i class="bi bi-whatsapp text-lg"></i>
@@ -73,34 +73,41 @@ import astroConfig from "../../astro.config.mjs";
     </div>
   </nav>
 
+  <div
+    id="mobile-menu-backdrop"
+    class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300 lg:hidden"
+  ></div>
+
   <!-- Mobile menu -->
   <div
     id="mobile-menu"
-    class="fixed inset-0 top-24 z-50 hidden bg-slate-900/95 px-6 pb-12 pt-8 text-white transition-all duration-300 ease-out transform -translate-y-full opacity-0"
+    class="pointer-events-none fixed inset-x-0 z-50 mx-auto w-[min(92vw,28rem)] -translate-y-3 rounded-2xl border border-[#f3c0b3] bg-white p-4 text-slate-900 opacity-0 shadow-2xl transition-all duration-300 lg:hidden"
   >
-    <div class="mx-auto flex max-w-md flex-col gap-4">
+    <div class="flex flex-col gap-2">
       <a
-        href={astroConfig.site + "#inicio"}
-        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        href="/#inicio"
+        class="rounded-xl px-4 py-3 text-base font-semibold transition hover:bg-[#fdeeea] hover:text-[#de3f21]"
         >Início</a
       >
       <a
-        href={astroConfig.site + "#servicos"}
-        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        href="/#servicos"
+        class="rounded-xl px-4 py-3 text-base font-semibold transition hover:bg-[#fdeeea] hover:text-[#de3f21]"
         >Serviços</a
       >
       <a
-        href={astroConfig.site + "#cardans"}
-        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        href="/#cardans"
+        class="rounded-xl px-4 py-3 text-base font-semibold transition hover:bg-[#fdeeea] hover:text-[#de3f21]"
         >Linha de cardans</a
       >
       <a
-        href={astroConfig.site + "#contato"}
-        class="rounded-xl border border-white/10 px-5 py-3 text-base font-semibold transition hover:bg-white/10"
+        href="/#contato"
+        class="rounded-xl px-4 py-3 text-base font-semibold transition hover:bg-[#fdeeea] hover:text-[#de3f21]"
         >Contato</a
       >
       <a
-        href="https://api.whatsapp.com/send?phone=5521974210745"
+        href="https://api.whatsapp.com/send?phone=5521964210745"
+        target="_blank"
+        rel="noopener noreferrer"
         class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-3 text-base font-semibold text-white shadow-lg shadow-green-600/40 transition hover:bg-green-700"
       >
         <i class="bi bi-whatsapp text-lg"></i>
@@ -112,30 +119,101 @@ import astroConfig from "../../astro.config.mjs";
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
     const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenuBackdrop = document.getElementById("mobile-menu-backdrop");
     const mobileMenu = document.getElementById("mobile-menu");
-    const menuLinks = mobileMenu?.querySelectorAll("a");
+    const menuLinks = document.querySelectorAll("header a[href]");
+    const mobileMenuLinks = mobileMenu?.querySelectorAll("a");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const menuIcon = mobileMenuButton?.querySelector("i");
+
+    const setMenuPosition = () => {
+      if (!(header instanceof HTMLElement) || !(mobileMenu instanceof HTMLElement)) {
+        return;
+      }
+
+      const headerBottom = header.getBoundingClientRect().bottom;
+      mobileMenu.style.top = `${headerBottom + 8}px`;
+    };
 
     const toggleMenu = (forceClose = false) => {
       const isOpen = mobileMenu?.classList.contains("opacity-100");
       const shouldOpen = forceClose ? false : !isOpen;
 
       if (shouldOpen) {
-        mobileMenu?.classList.remove("opacity-0", "-translate-y-full", "hidden");
-        mobileMenu?.classList.add("opacity-100", "translate-y-0");
+        setMenuPosition();
+        mobileMenu?.classList.remove("opacity-0", "-translate-y-3", "pointer-events-none");
+        mobileMenu?.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
+        mobileMenuBackdrop?.classList.remove("opacity-0", "pointer-events-none");
+        mobileMenuBackdrop?.classList.add("opacity-100", "pointer-events-auto");
+        document.body.classList.add("overflow-hidden");
+        menuIcon?.classList.remove("bi-list");
+        menuIcon?.classList.add("bi-x-lg");
         mobileMenuButton?.setAttribute("aria-expanded", "true");
       } else {
-        mobileMenu?.classList.remove("opacity-100", "translate-y-0");
-        mobileMenu?.classList.add("opacity-0", "-translate-y-full", "hidden");
+        mobileMenu?.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
+        mobileMenu?.classList.add("opacity-0", "-translate-y-3", "pointer-events-none");
+        mobileMenuBackdrop?.classList.remove("opacity-100", "pointer-events-auto");
+        mobileMenuBackdrop?.classList.add("opacity-0", "pointer-events-none");
+        document.body.classList.remove("overflow-hidden");
+        menuIcon?.classList.remove("bi-x-lg");
+        menuIcon?.classList.add("bi-list");
         mobileMenuButton?.setAttribute("aria-expanded", "false");
       }
     };
 
+    setMenuPosition();
     mobileMenuButton?.addEventListener("click", () => toggleMenu());
+    mobileMenuBackdrop?.addEventListener("click", () => toggleMenu(true));
 
-    menuLinks?.forEach((link) =>
-      link.addEventListener("click", () => toggleMenu(true))
+    menuLinks.forEach((link) =>
+      link.addEventListener("click", (event) => {
+        const href = link.getAttribute("href");
+        if (!href) {
+          return;
+        }
+
+        const url = new URL(href, window.location.origin);
+        const isSamePage = url.origin === window.location.origin && url.pathname === window.location.pathname;
+        const isAnchor = Boolean(url.hash);
+
+        if (isSamePage && isAnchor) {
+          const target = document.querySelector(url.hash);
+          if (target) {
+            event.preventDefault();
+
+            const headerOffset = (header instanceof HTMLElement ? header.offsetHeight : 0) + 12;
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+            window.scrollTo({
+              top: Math.max(targetTop, 0),
+              behavior: prefersReducedMotion ? "auto" : "smooth",
+            });
+          }
+        }
+
+        if (link.closest("#mobile-menu")) {
+          toggleMenu(true);
+        }
+      })
     );
+
+    mobileMenuLinks?.forEach((link) =>
+      link.addEventListener("click", () => {
+        if (!link.closest("#mobile-menu")) {
+          return;
+        }
+        toggleMenu(true);
+      })
+    );
+
+    window.addEventListener("resize", () => {
+      setMenuPosition();
+      if (window.innerWidth >= 1024) {
+        toggleMenu(true);
+      }
+    });
 
     document.addEventListener("keyup", (event) => {
       if (event.key === "Escape") {

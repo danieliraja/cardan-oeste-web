@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductCard from "../components/catalogo/ProductCard.astro";
+import { products } from "../data/products";
+
+const pageTitle = "Catálogo de Produtos | Cardan Oeste";
+const pageDescription =
+  "Catálogo técnico de componentes e eixos cardan da Cardan Oeste: cruzetas, rolamentos, flange central, espigão, ponta com rosca, pantufa e conjuntos completos.";
+
+const productListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Catálogo de Produtos Cardan Oeste",
+  itemListElement: products.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Product",
+      name: product.name,
+      description: product.description,
+      image: product.image,
+      url: `/produtos/${product.slug}`,
+    },
+  })),
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="bg-gradient-to-b from-white via-[#fdeeea] to-white">
+    <section class="relative overflow-hidden bg-[#7a1f10] py-20 text-white">
+      <div class="absolute inset-0 bg-[url('/images/banner.jpg')] bg-cover opacity-10"></div>
+      <div class="relative mx-auto max-w-6xl px-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#f3c0b3]">Catálogo Técnico</p>
+        <h1 class="mt-4 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          Produtos para manutenção e fabricação de cardans
+        </h1>
+        <p class="mt-6 max-w-3xl text-base text-[#f8d9d2]">
+          Linha de componentes e conjuntos completos para aplicações automotivas e industriais, com foco em durabilidade,
+          precisão dimensional e disponibilidade para atendimento rápido.
+        </p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5521964210745&text=Olá%2C%20gostaria%20de%20um%20orçamento%20do%20catálogo%20de%20produtos."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex items-center gap-2 rounded-full bg-green-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-green-500/40 transition hover:bg-green-600"
+        >
+          <i class="bi bi-whatsapp text-base"></i>
+          Solicitar orçamento no WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-[#de3f21]">Itens do Catálogo</h2>
+        <div class="mt-8 grid auto-rows-fr grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
+          {
+            products.map((product, index) => <ProductCard product={product} index={index} />)
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(productListLd)} />
+</Layout>

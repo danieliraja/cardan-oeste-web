@@ -1,0 +1,68 @@
+---
+import type { Product } from "../../data/products";
+
+interface Props {
+  product: Product;
+  index: number;
+}
+
+const { product, index } = Astro.props;
+const whatsappText = encodeURIComponent(
+  `Olá, tenho interesse em ${product.name}. Pode me enviar especificações completas, disponibilidade e valor?`
+);
+const cardImage = product.cardImage ?? product.image;
+const cardWidth = product.cardWidth ?? product.width;
+const cardHeight = product.cardHeight ?? product.height;
+---
+
+<article
+  id={product.slug}
+  class="flex h-full flex-col overflow-hidden rounded-2xl border border-[#f3c0b3] bg-white shadow-sm"
+>
+  <img
+    src={cardImage}
+    alt={product.name}
+    width={cardWidth}
+    height={cardHeight}
+    loading={index < 2 ? "eager" : "lazy"}
+    decoding="async"
+    fetchpriority={index === 0 ? "high" : "auto"}
+    class="h-64 w-full object-cover object-center"
+  />
+
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-xl font-semibold text-slate-900">{product.name}</h3>
+    <p class="product-description mt-3 text-sm leading-relaxed text-slate-600">{product.description}</p>
+
+    <div class="mt-auto flex w-full items-center justify-end gap-3 pt-3">
+      <a
+        href={`/produtos/${product.slug}`}
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#de3f21] text-[#de3f21] transition hover:bg-[#de3f21] hover:text-white"
+        aria-label={`Ver detalhes de ${product.name}`}
+        title="Ver detalhes"
+      >
+        <i class="bi bi-eye"></i>
+      </a>
+
+      <a
+        href={`https://api.whatsapp.com/send?phone=5521964210745&text=${whatsappText}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-green-600 text-green-600 transition hover:bg-green-600 hover:text-white"
+        aria-label={`Pedir detalhes no WhatsApp sobre ${product.name}`}
+        title="Pedir detalhes no WhatsApp"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .product-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
